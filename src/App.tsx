@@ -134,7 +134,7 @@ const generarNombre = () => {
           <div className="bar">
             <div className="fill" style={{ width: `${progress}%` }} />
           </div>
-          <small>{Math.floor(progress)}%</small>
+          <small className="percent">{Math.floor(progress)}%</small>
         </div>
       )}
 {step === "result" && (

@@ -109,9 +109,16 @@ p {
 
 .promo-box {
   width: 280px;
-  height: 250px;
+  height: 260px;
   margin-top: 0px;
   border-radius: 14px;
   background: rgba(255,255,255,0.04);
   overflow: hidden;
+}
+
+/* Ocultar porcentaje en móviles */
+@media (max-width: 768px) {
+  .percent {
+    display: none;
+  }
 }
