@@ -39,17 +39,23 @@ useEffect(() => {
   return () => clearInterval(int);
 }, []);
 
+
 useEffect(() => {
   if (step === "start") {
+    const el = document.getElementById("promo-native");
+    if (!el) return;
+
+    el.innerHTML = "";
+
     const s = document.createElement("script");
-    s.src =
-      "https://pl28704913.effectivegatecpm.com/e2f8b803840c845e3b00e6f0911cd048/invoke.js";
     s.async = true;
     s.setAttribute("data-cfasync", "false");
-    document.getElementById("native-start")?.appendChild(s);
+    s.src =
+      "https://pl28704913.effectivegatecpm.com/e2f8b803840c845e3b00e6f0911cd048/invoke.js";
+
+    el.appendChild(s);
   }
 }, [step]);
-
 
 
  const start = () => {
