@@ -20,7 +20,9 @@ html, body, #root {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
+  margin-top: -10px;
+
 }
 
 /* TARJETA */
@@ -103,4 +105,43 @@ p {
   background: rgba(255,255,255,0.08);
   border-radius: 8px;
   margin-bottom: 6px;
+}
+
+/* Contenedor del bloque sugerido */
+.promo {
+  margin-top: 14px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  min-height: 90px;     /* 👈 alto fijo visible */
+  max-height: 110px;   /* 👈 evita que crezca infinito */
+  overflow: hidden;   /* 👈 corta lo que se salga */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Título */
+.ad-title {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-bottom: 6px;
+}
+
+/* Donde inyecta la red */
+#promo-start {
+  width: 100%;
+  min-height: 60px;
+  max-height: 80px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* si la red mete un iframe gigante */
+#promo-start iframe,
+#promo-start div {
+  max-height: 80px !important;
+  width: 100% !important;
 }
