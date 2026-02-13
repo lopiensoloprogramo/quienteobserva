@@ -42,7 +42,7 @@ useEffect(() => {
 
 useEffect(() => {
   if (step === "start") {
-    const el = document.getElementById("promo");
+    const el = document.getElementById("promo-start");
     if (!el) return;
 
     el.innerHTML = "";
