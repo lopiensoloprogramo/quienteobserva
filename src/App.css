@@ -33,6 +33,7 @@ html, body, #root {
   flex-direction: column;
   gap: 10px;
   align-items: center;   /* <- CENTRA TEXTO Y BARRA */
+  margin-top: -10px;
 }
 
 /* TEXTOS */
