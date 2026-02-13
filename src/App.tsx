@@ -40,18 +40,27 @@ useEffect(() => {
 }, []);
 
 
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://pl28677830.effectivegatecpm.com/53625cd16e79dc4f5be82578d256686f/invoke.js";
-    script.async = true;
-    script.dataset.cfasync = "false";
-    document.body.appendChild(script);
+useEffect(() => {
+  const box = document.getElementById("native-box");
+  if (!box) return;
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
+  box.innerHTML = `
+    <iframe 
+      sandbox="allow-scripts allow-same-origin allow-popups"
+      style="width:100%;height:100%;border:none;overflow:hidden;"
+      srcdoc="
+        <html>
+          <body style='margin:0;padding:0;overflow:hidden;background:transparent;'>
+            <script async data-cfasync='false' 
+              src='https://pl28677830.effectivegatecpm.com/53625cd16e79dc4f5be82578d256686f/invoke.js'>
+            </script>
+            <div id='container-53625cd16e79dc4f5be82578d256686f'></div>
+          </body>
+        </html>
+      ">
+    </iframe>
+  `;
+}, []);
 
  const start = () => {
   setStep("loading");
@@ -112,10 +121,9 @@ const generarNombre = () => {
           </button>
 
     
-          <div
-            id="container-b3/5a/91/b35a91b3d1b7c12d2398559a8f4f374f"
-            style={{ fontSize: 12, opacity: 0.8 }}
-          ></div>
+            <div className="promo-box">
+          <div id="native-box"></div>
+        </div>
     
         </>
       )}
