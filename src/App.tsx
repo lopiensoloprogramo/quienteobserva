@@ -39,6 +39,19 @@ useEffect(() => {
   return () => clearInterval(int);
 }, []);
 
+useEffect(() => {
+  if (step === "start") {
+    const s = document.createElement("script");
+    s.src =
+      "https://pl28704913.effectivegatecpm.com/e2f8b803840c845e3b00e6f0911cd048/invoke.js";
+    s.async = true;
+    s.setAttribute("data-cfasync", "false");
+    document.getElementById("native-start")?.appendChild(s);
+  }
+}, [step]);
+
+
+
  const start = () => {
   setStep("loading");
   setProgress(0);
@@ -65,7 +78,7 @@ useEffect(() => {
   const openAd = () => {
     const s = document.createElement("script");
     s.src =
-      "https://pl28698498.effectivegatecpm.com/af/47/e5/af47e5f5902cc0de8bbfb7592188853b.js";
+      "https://pl28704925.effectivegatecpm.com/b3/5a/91/b35a91b3d1b7c12d2398559a8f4f374f.js";
     s.async = true;
     document.body.appendChild(s);
   };
@@ -84,7 +97,6 @@ const generarNombre = () => {
 
 
 
-
   return (
     <div className="app">
 
@@ -97,6 +109,11 @@ const generarNombre = () => {
           <button className="btn" onClick={start}>
             DESCUBRIR QUIÉN
           </button>
+
+          <div className="promo-native">
+          <p className="ad-title">Sugerido para ti</p>
+          <div id="promo-start"></div>
+        </div>
         </>
       )}
 
