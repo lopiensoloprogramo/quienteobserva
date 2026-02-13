@@ -109,44 +109,26 @@ p {
 
 /* Contenedor del bloque sugerido */
 /* CAJA FIJA REAL */
-.promo {
-  width: 260px;
-  height: 110px;           /* 👈 tamaño fijo */
-  margin: 14px auto 0;
+.promo-box {
+  margin-top: 18px;
+  width: 280px;
+  height: 220px;
   border-radius: 14px;
-  background: rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.04);
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  overflow: hidden;       /* 👈 lo corta sí o sí */
-  position: relative;
 }
 
-/* titulo */
-.ad-title {
-  font-size: 12px;
-  opacity: .7;
-  margin-bottom: 6px;
-  text-align: center;
-}
-
-/* SLOT DONDE ENTRA LA RED */
-#promo-start {
+.promo-frame {
   width: 100%;
-  height: 70px;           /* 👈 limite real */
-  overflow: hidden;      /* 👈 máscara */
-  position: relative;
+  height: 100%;
+  overflow: hidden;     /* 👈 CLAVE */
+  position: relative;  /* 👈 CLAVE */
 }
 
-/* TODO lo que meta la red queda forzado */
-#promo-start iframe,
-#promo-start div,
-#promo-start span {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 70px !important;
-  max-height: 70px !important;
-  object-fit: cover !important;
+.promo-frame iframe,
+.promo-frame div {
+  max-width: 100% !important;
+  max-height: 100% !important;
 }

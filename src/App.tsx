@@ -114,10 +114,11 @@ const generarNombre = () => {
             DESCUBRIR QUIÉN
           </button>
 
-          <div className="promo">
-            <p className="ad-title">Sugerido para ti</p>
-            <div id="promo-start"></div>
-          </div>
+      <div className="promo-box">
+        <div className="promo-frame">
+          <div id="promo-start"></div>
+        </div>
+      </div>
         </>
       )}
 
