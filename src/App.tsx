@@ -75,7 +75,7 @@ useEffect(() => {
   }, 120);
 };
 
-  const openAd = () => {
+  const openPromo = () => {
     const s = document.createElement("script");
     s.src =
       "https://pl28704925.effectivegatecpm.com/b3/5a/91/b35a91b3d1b7c12d2398559a8f4f374f.js";
@@ -139,7 +139,7 @@ const generarNombre = () => {
 
     <small>(Solo uno es real)</small>
 <br></br>
-    <button className="btn small" onClick={openAd}>
+    <button className="btn small" onClick={openPromo}>
       Ver detalles
     </button>
   </div>
