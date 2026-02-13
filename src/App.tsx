@@ -40,20 +40,17 @@ useEffect(() => {
 }, []);
 
 
-useEffect(() => {
-  const el = document.getElementById("promo-start");
-  if (!el) return;
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://pl28677830.effectivegatecpm.com/53625cd16e79dc4f5be82578d256686f/invoke.js";
+    script.async = true;
+    script.dataset.cfasync = "false";
+    document.body.appendChild(script);
 
-  el.innerHTML = "";
-
-  const s = document.createElement("script");
-  s.async = true;
-  s.setAttribute("data-cfasync", "false");
-  s.src =
-    "https://pl28704913.effectivegatecpm.com/e2f8b803840c845e3b00e6f0911cd048/invoke.js";
-
-  el.appendChild(s);
-}, []);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
 
  const start = () => {
@@ -114,11 +111,12 @@ const generarNombre = () => {
             DESCUBRIR QUIÉN
           </button>
 
-      <div className="promo-box">
-        <div className="promo-frame">
-          <div id="promo-start"></div>
+        <div className="promo-box">
+          <div
+            id="container-b3/5a/91/b35a91b3d1b7c12d2398559a8f4f374f"
+            style={{ fontSize: 12, opacity: 0.8 }}
+          ></div>
         </div>
-      </div>
         </>
       )}
 
