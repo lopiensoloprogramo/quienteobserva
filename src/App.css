@@ -104,10 +104,3 @@ p {
   border-radius: 8px;
   margin-bottom: 6px;
 }
-.promo{
-
-   width: 100%;
-  max-height: 300px;
-  overflow-y: auto; 
-  max-width: 360px;
-}
