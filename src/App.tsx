@@ -41,21 +41,19 @@ useEffect(() => {
 
 
 useEffect(() => {
+  const el = document.getElementById("promo-start");
+  if (!el) return;
 
-    const el = document.getElementById("promo-start");
-    if (!el) return;
+  el.innerHTML = "";
 
-    el.innerHTML = "";
+  const s = document.createElement("script");
+  s.async = true;
+  s.setAttribute("data-cfasync", "false");
+  s.src =
+    "https://pl28704913.effectivegatecpm.com/e2f8b803840c845e3b00e6f0911cd048/invoke.js";
 
-    const s = document.createElement("script");
-    s.async = true;
-    s.setAttribute("data-cfasync", "false");
-    s.src =
-      "https://pl28704913.effectivegatecpm.com/e2f8b803840c845e3b00e6f0911cd048/invoke.js";
-
-    el.appendChild(s);
-  
-}, [step]);
+  el.appendChild(s);
+}, []); // 👈 solo una vez al cargar la app
 
 
  const start = () => {
