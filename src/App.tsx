@@ -41,7 +41,7 @@ useEffect(() => {
 
 
 useEffect(() => {
-  if (step === "start") {
+
     const el = document.getElementById("promo-start");
     if (!el) return;
 
@@ -54,7 +54,7 @@ useEffect(() => {
       "https://pl28704913.effectivegatecpm.com/e2f8b803840c845e3b00e6f0911cd048/invoke.js";
 
     el.appendChild(s);
-  }
+  
 }, [step]);
 
 
