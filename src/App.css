@@ -121,27 +121,3 @@ p {
   justify-content: center;
 }
 
-/* Título */
-.ad-title {
-  font-size: 12px;
-  opacity: 0.7;
-  margin-bottom: 6px;
-}
-
-/* Donde inyecta la red */
-#promo-start {
-  width: 100%;
-  min-height: 60px;
-  max-height: 80px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* si la red mete un iframe gigante */
-#promo-start iframe,
-#promo-start div {
-  max-height: 80px !important;
-  width: 100% !important;
-}
