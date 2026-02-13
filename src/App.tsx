@@ -41,19 +41,25 @@ useEffect(() => {
 
 
 useEffect(() => {
-  const el = document.getElementById("promo-start");
-  if (!el) return;
+  const timer = setTimeout(() => {
+    const el = document.getElementById("promo-start");
+    if (!el) return;
 
-  el.innerHTML = "";
+    el.innerHTML = `
+      <div id="container-e2f8b803840c845e3b00e6f0911cd048"></div>
+    `;
 
-  const s = document.createElement("script");
-  s.async = true;
-  s.setAttribute("data-cfasync", "false");
-  s.src =
-    "https://pl28704913.effectivegatecpm.com/e2f8b803840c845e3b00e6f0911cd048/invoke.js";
+    const s = document.createElement("script");
+    s.async = true;
+    s.setAttribute("data-cfasync", "false");
+    s.src =
+      "https://pl28704913.effectivegatecpm.com/e2f8b803840c845e3b00e6f0911cd048/invoke.js";
 
-  el.appendChild(s);
-}, []); // 👈 solo una vez al cargar la app
+    el.appendChild(s);
+  }, 1200); // ⏱ espera que el DOM esté listo
+
+  return () => clearTimeout(timer);
+}, []);
 
 
  const start = () => {
@@ -115,9 +121,9 @@ const generarNombre = () => {
           </button>
 
           <div className="promo">
-          <p className="ad-title">Sugerido para ti</p>
-          <div id="promo-start"></div>
-        </div>
+            <p className="ad-title">Sugerido para ti</p>
+            <div id="promo-start"></div>
+          </div>
         </>
       )}
 
