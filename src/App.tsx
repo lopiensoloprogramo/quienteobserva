@@ -42,7 +42,7 @@ useEffect(() => {
 
 useEffect(() => {
   if (step === "start") {
-    const el = document.getElementById("promo-native");
+    const el = document.getElementById("promo");
     if (!el) return;
 
     el.innerHTML = "";
@@ -116,7 +116,7 @@ const generarNombre = () => {
             DESCUBRIR QUIÉN
           </button>
 
-          <div className="promo-native">
+          <div className="promo">
           <p className="ad-title">Sugerido para ti</p>
           <div id="promo-start"></div>
         </div>
