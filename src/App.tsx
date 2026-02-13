@@ -111,12 +111,12 @@ const generarNombre = () => {
             DESCUBRIR QUIÉN
           </button>
 
-        <div className="promo-box">
+    
           <div
             id="container-b3/5a/91/b35a91b3d1b7c12d2398559a8f4f374f"
             style={{ fontSize: 12, opacity: 0.8 }}
           ></div>
-        </div>
+    
         </>
       )}
 
